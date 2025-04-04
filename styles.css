@@ -1,0 +1,169 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #e74c3c;
+    --accent: #4471ad;
+    --light: #ecf0f1;
+    --dark: #2c3e50;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f5f7fa;
+    color: var(--dark);
+    line-height: 1.6;
+  }
+  
+  .app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .app-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: var(--border-radius);
+  }
+  
+  .app-header h1 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .campus-map {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+  }
+  
+  .campus-map h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    text-align: center;
+  }
+  
+  .blocks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .block-card {
+    background: var(--light);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .block-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--accent);
+    color: white;
+  }
+  
+  .block-card h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .block-info {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+  }
+  
+  .back-button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background: var(--secondary);
+  }
+  
+  .block-details {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .block-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+  }
+  
+  .details-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .details-section h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+  }
+  
+  .details-section ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+  }
+  
+  .meta-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .meta-info p {
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .block-details {
+      grid-template-columns: 1fr;
+    }
+    
+    .blocks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* Special styles for PRP block */
+.block-card[data-block="prp"] {
+    border-left: 4px solid #4471ad;
+  }
+  
+  .block-card[data-block="prp"]:hover {
+    background-color:#4471ad;
+  }
+  
+ 
+  
+  .highlight-section h3 {
+    color: #4471ad;
+  }
+  
+  /* Update the blocks-grid to add special indicator for research blocks */
+  
